@@ -1,0 +1,10 @@
+{
+    "contacts": [
+        {
+            "id": 1,
+            "name": "Pedro Alberto",
+            "email": "pedalb@gmail.com",
+            "phone": "356 345784877"
+        }
+    ]
+}
