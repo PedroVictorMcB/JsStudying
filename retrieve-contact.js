@@ -1,4 +1,4 @@
-const db = require('./db.json');
+const db = require('./contact-db.json');
 
 const searchId = +process.argv[2]; //parametro que foi enviado por comand line.
 const {contacts} = db; //Criei uma variável chamada contacts a partir da destructuring de uma variável que possui uma chave chamada contacts

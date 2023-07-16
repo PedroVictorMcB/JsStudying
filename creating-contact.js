@@ -10,16 +10,20 @@ if (db){
     currentContacts = db.contacts;
 };
 
+function idHandler(contact){
+    return contact.id;
+}
+
+const idListNum = currentContacts.map(idHandler);
+const idMax = Math.max(...idListNum);
+
 const contact = {
-    id: 1,
+    id: idMax + 1,
     name: nameTxt, 
     email, 
     phone,
 };
 
-if (contact.id === db.contacts.id){
-    contact.id = contact.id + 1;
-};
 const contactList = [...currentContacts, contact];
 const contactsDB = {
     contacts: contactList,
