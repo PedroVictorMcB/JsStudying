@@ -12,4 +12,4 @@ if (contact){
     console.log(`Found contact with ID ${contact.id}\n\nName: ${contact.name}\nE-mail: ${contact.email}\nPhone: ${contact.phone}`);
 } else{
     console.log("Not Found");
-}
+};
