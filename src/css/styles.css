@@ -1,0 +1,104 @@
+body{
+    font-family: "Barlow", sans-serif;
+    background-color: #240007;
+    color:  #eae7ff;
+}
+body::before{
+    content: "";
+    background-image: url(../img-db/bg-site-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+}
+.titulo-cabecalho{
+    font-family: "Carter One", cursive;
+    font-size: 95px;
+    text-align: center;
+    -webkit-text-stroke: 1px #b00c17;
+}
+.cabecalho .selecao-afiliacao{
+    font-family: "Carter One", cursive;
+    font-size: 40px;
+    text-align: center;
+    -webkit-text-stroke: 0.5px #210003;
+}
+.selecao-personagens{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: calc(100vh - 292.800px);
+    justify-content: center;
+}
+.selecao-personagens .lista-personagens{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+.selecao-personagens .personagens{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 940px;
+    gap: 15px;
+}
+.selecao-personagens .personagens .titulo-selecao-personagens{
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #eae7ff;
+    border-top: 2px solid #eae7ff;
+    width: 100%;
+    text-align: center;
+}
+.lista-personagens .personagem img{
+    width: 100%;
+    height: 100%;
+}
+.lista-personagens .personagem.selecionado{
+    box-shadow: 0px 0px 10px 5px #ca151b;
+}
+.personagem-selecionado{
+    text-align: center;
+    max-width: 940px;
+    max-height: 784px;
+}
+.personagem-selecionado .personagem-grande{
+    width: 912px;
+    height: 557px;
+}
+.personagem-selecionado .nome-personagem{
+    border-bottom: 2px solid #eae7ff;
+    border-top: 2px solid #eae7ff;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 1px;
+    font-size: 25px;
+}
+.personagem-selecionado .descricao-personagem{
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 10px;
+}
+.demon-slayer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 940px;
+    gap: 15px;
+}
+.demon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 940px;
+    gap: 15px;
+}
