@@ -13,15 +13,74 @@ window.onload = function() {
     // strongly tied to the existence or not of these character's image in img-db folder.
 
     // This is the list that will need to have characters appended:
-    charactersList = document.getElementById("lista-personagens");
+    charactersListDOM = document.getElementById("lista-personagens");
 
 
     // Bellow, there's the process to create one character. You'll need to put it
     // inside map function:
 
-    // character = document.createElement('li');​
-    // character.classList.add('personagem');
-    // character.id = 'PUT HERE THE CHARACTER ID';
+    function characterHandler(characterData, index){
+        const character = document.createElement('li');
+        character.classList.add('personagem');
+        character.id = characterData.id;
+        character.setAttribute('data-name', characterData.name);
+        character.setAttribute('data-description', characterData.combatStyle);
+        characterImage = document.createElement('img');
+        characterImage.src = `./src/img-db/${characterData.id}.jpg`;
+        character.appendChild(characterImage);
+        
+        if(index === 0){
+            character.classList.add('selecionado');
+        }
+
+        return character;
+    };
+    
+    const personaList = window.charactersList.character.map(characterHandler);
+    
+    function appendHandler(character){
+        charactersListDOM.appendChild(character);
+
+    };
+
+    personaList.forEach(appendHandler);
+
+    const personagens = document.querySelectorAll('.personagem'); //pesquisar sobre document, document.
+
+    /*personagens.addEventListeners('click', () => {
+        console.log('clicou!');
+    } ); pesquisar sobre arrow function*/
+
+
+    personagens.forEach((personagem) => {
+        personagem.addEventListener('click', () => {
+
+            if(window.innerWidth < 450){
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+
+            /*para refatorar selecione o txt >> clique com o direito >> acesse refatorar >> extrair para function
+            no escopo global >> nomear o nome de sua função
+            */
+            
+            const personagemSelecionado = document.querySelector('.selecionado');
+            personagemSelecionado.classList.remove('selecionado');  
+
+            personagem.classList.add('selecionado');
+
+            const imagemPersonagemGrande = document.querySelector('.personagem-grande');
+            const idPersonagem = personagem.attributes.id.value;
+            
+            imagemPersonagemGrande.src = `./src/img-db/${idPersonagem}.jpg`; //ajuste os nomes das imgs para funcionar
+            //pesquisar sobre interpolação template string
+
+            const nomePersonagem = document.getElementById('nome-personagem');
+            nomePersonagem.innerText = personagem.getAttribute('data-name');
+
+            const descricaoPersonagem = document.getElementById('descricao-personagem');
+            descricaoPersonagem.innerText = personagem.getAttribute('data-description');
+        })
+    })
     // character.setAttribute('data-name', 'PUT HERE CHARACTER NAME');
     // character.setAttribute('data-description', 'PUT HERE CHARACTER DESCRIPTION');
     // ... do these same additions of character.setAttribute('data-ATTRIBUTE', ...) to the remaining attributes
@@ -39,4 +98,5 @@ window.onload = function() {
     // HOMEWORK STEP 2: Now that you've loaded character's list dynamically, please change the DOM's
     // in pagina-selecao.html at section <section class="personagem-selecionado"> to show all the detailed
     // character's data obtained in window.charactersList. Find the nicier styles to display it with beauty.
+
 }

@@ -95,6 +95,30 @@
             "animeDebut": "Episódio 1",
             "japanDub": "Natsuki Hanae",
             "englishDub": "Zach Aguillar"
+        },
+        {
+            "id": 5,
+            "name": "Zenitsu",
+            "alias": "NI",
+            "race": "NI",
+            "gender": "Ni",
+            "age": "NI",
+            "height": "Ni",
+            "weight": "NI",
+            "birthday": "Ni",
+            "hairColor": "Ni",
+            "eyeColor": "NI",
+            "affiliation": "NI",
+            "occupation": "NI",
+            "combatStyle": "Respiração Trovão",
+            "partner": "NI",
+            "operationBase": "NI",
+            "liveStatus": "NI",
+            "relatives": "NI",
+            "mangaDebut": "NI",
+            "animeDebut": "NI",
+            "japanDub": "NI",
+            "englishDub": "NI"
         }
     ]
 }

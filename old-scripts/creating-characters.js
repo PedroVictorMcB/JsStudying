@@ -1,5 +1,5 @@
 const fs = require('fs');
-const db = require('./contact-db.json');
+const db = require('./character-db.json');
 const { log } = require('console');
 
 const nameTxt = process.argv[2];
@@ -71,7 +71,7 @@ const charactersDB = {
 };
 const charactersListDB = JSON.stringify(charactersDB, null, 4);
 
-fs.writeFile('contact-db.json', charactersListDB, function (err) {
+fs.writeFile('character-db.json', charactersListDB, function (err) {
     if (err) throw err;
     console.log('Saved!');
   });

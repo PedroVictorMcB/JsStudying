@@ -2,6 +2,8 @@ body{
     font-family: "Barlow", sans-serif;
     background-color: #240007;
     color:  #eae7ff;
+    display: block;
+    align-items: center;
 }
 body::before{
     content: "";
@@ -17,15 +19,16 @@ body::before{
 }
 .titulo-cabecalho{
     font-family: "Carter One", cursive;
-    font-size: 95px;
+    font-size: 45px;
     text-align: center;
     -webkit-text-stroke: 1px #b00c17;
 }
 .cabecalho .selecao-afiliacao{
     font-family: "Carter One", cursive;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     -webkit-text-stroke: 0.5px #210003;
+    margin-bottom: 10px;
 }
 .selecao-personagens{
     display: flex;
@@ -47,6 +50,10 @@ body::before{
     max-width: 940px;
     gap: 15px;
 }
+.selecao-personagens .personagens .personagens-box{
+    width: 912px;
+    height: 753px;
+}
 .selecao-personagens .personagens .titulo-selecao-personagens{
     font-size: 30px;
     text-transform: uppercase;
@@ -55,6 +62,8 @@ body::before{
     border-top: 2px solid #eae7ff;
     width: 100%;
     text-align: center;
+    margin-bottom: 20px;
+    margin-top: -13px;
 }
 .lista-personagens .personagem img{
     width: 100%;
@@ -65,8 +74,12 @@ body::before{
 }
 .personagem-selecionado{
     text-align: center;
-    max-width: 940px;
-    max-height: 784px;
+    width: 940px;
+    height: 784px;
+}
+.personagem-selecionado .pesonagem-selecionado-box{
+    width: 912px;
+    height: 753px;
 }
 .personagem-selecionado .personagem-grande{
     width: 912px;
@@ -87,6 +100,10 @@ body::before{
     line-height: 22px;
     text-align: center;
     margin-top: 10px;
+}
+.selecao-personagens .selecao-afiliacao-box{
+    max-width: 1910px auto;
+    max-height: 803px auto;
 }
 .demon-slayer{
     display: flex;
