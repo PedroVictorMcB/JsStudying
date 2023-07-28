@@ -11,9 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&family=Carter+One&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/styles.css">
-    <link rel="stylesheet" href="./src/css/responsive.css">
+    <link rel="stylesheet" href="./src/css/index.css">
 
     <script type="text/javascript" src="./src/js/load-characters-db.js"></script>
     <script type="text/javascript" src="./src/js/characters-list.js"></script>
@@ -21,28 +19,47 @@
 
 <body>
     <header class="cabecalho">
-        <a href="index.html"><h1 class="titulo-cabecalho">DEMON SLAYER FANDOM</h1></a>
-        </section>
-        <h2 class="selecao-afiliacao">DEMON SLAYERS</h2>
+        <a href="index.html">
+            <h1 class="main-title">DEMON SLAYER FANDOM</h1>
+        </a>
+        <h2 class="subtitle">DEMON SLAYERS</h2>
     </header>
     <main class="selecao-personagens">
         <section class="personagens">
-            <h1 class="titulo-selecao-personagens">
+            <h1 class="subtitle">
                 SELECT A CHARACTER
             </h1>
             <ul class="lista-personagens" id="lista-personagens">
-                
             </ul>
         </section>
         <section class="personagem-selecionado">
-            <img class="personagem-grande" src="./src/img-db/1.jpg" alt="Personagem Selecionado" width="912" height="557">
+            <img class="personagem-grande" alt="Personagem Selecionado" width="912" height="557">
             <div class="informacoes-personagem">
-                <h2 class="nome-personagem" id="nome-personagem">
-                    Genya Shinazugawa
-                </h2>
-                <p class="descricao-personagem" id="descricao-personagem">
-                    Genya Shinazugawa is a major supporting character of Demon Slayer: Kimetsu no Yaiba. He is a Demon Slayer in the Demon Slayer Corps and also the younger brother of the Wind Hashira, Sanemi Shinazugawa.
-                </p>
+                <h2 class="nome-personagem" id="nome-personagem"></h2>
+                <p class="descricao-personagem" id="descricao-personagem"></p>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th colspan="2" class="subtitle">Informações Gerais</th>
+                    </tr>
+                    <tr>
+                        <td>Race</td>
+                        <td id="race-personagem"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td id="gender-personagem"></td>
+                    </tr>
+                    <tr>
+                        <td>Affiliation</td>
+                        <td id="affiliation-personagem"></td>
+                    </tr>
+                    <tr>
+                        <td>Combat Style</td>
+                        <td id="combat-personagem"></td>
+                    </tr>
+                </table>
             </div>
         </section>
     </main>

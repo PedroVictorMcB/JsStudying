@@ -1,0 +1,53 @@
+body {
+    background-image: url(https://garden.spoonflower.com/c/9410885/p/f/l/GOvyFpBkBciyw5PzVB06fH9aL2zh634xY4yxnWUO1nXojPtOVmY/Final%20selection%20Tanjiro.jpg);
+    background-color: aqua;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-title {
+    font-family: "Carter One", cursive;
+    color: rgb(207, 207, 207);
+    -webkit-text-stroke: 1px #1b0046;
+}
+
+h1.main-title {
+    font-size: 5rem;
+}
+
+h2.main-title {
+    font-size: 4rem;
+}
+
+h3.main-title {
+    font-size: 3rem;
+}
+
+h4.main-title {
+    font-size: 2rem;
+}
+
+h5.main-title {
+    font-size: 1rem;
+}
+
+h6.main-title {
+    font-size: 0.5rem;
+}
+
+header.cabecalho {
+    text-align: center;
+}
+
+header.cabecalho > a:link {
+    text-decoration: none;
+}
+
+ul.lista-personagens > li > img {
+    width: 300px;
+    height: 337px;
+    object-fit: cover;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}

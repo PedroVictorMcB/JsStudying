@@ -8,3 +8,6 @@
     f- computação gráfica
 
 2- SEO pesquisar
+3- cascading styles
+ css selector
+ css combinator

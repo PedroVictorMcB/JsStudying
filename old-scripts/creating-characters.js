@@ -23,6 +23,8 @@ const mangaDebut = process.argv[19];
 const animeDebut = process.argv[20];
 const japanDub = process.argv[21];
 const englishDub = process.argv[22];
+const description = process.argv[23];
+const image = process.argv[24];
 let currentCharacter = [];
 
 if (db){
@@ -63,6 +65,8 @@ const character = {
     animeDebut: animeDebut, //mais de um
     japanDub: japanDub, 
     englishDub: englishDub,
+    description: description,
+    image: image,
 }; //pesquisar pq não preciso colocar a variável dentro da chave no objeto
 
 const charactersList = [...currentCharacter, character];

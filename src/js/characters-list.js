@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = setTimeout( function() {
     console.log('Document is fully loaded and that\'s your characters list: ', window.charactersList)
 
     // HOMEWORK: With the list obtained by searching data from window.charactersList.character
@@ -24,15 +24,23 @@ window.onload = function() {
         character.classList.add('personagem');
         character.id = characterData.id;
         character.setAttribute('data-name', characterData.name);
-        character.setAttribute('data-description', characterData.combatStyle);
-        characterImage = document.createElement('img');
-        characterImage.src = `./src/img-db/${characterData.id}.jpg`;
+        character.setAttribute('data-description', characterData.description);
+        character.setAttribute('data-race', characterData.race);
+        character.setAttribute('data-gender', characterData.gender);
+        character.setAttribute('data-affiliation', characterData.affiliation);
+        character.setAttribute('data-combat-style', characterData.combatStyle);
+        const characterImage = document.createElement('img');
+        if (characterData.image){
+            characterImage.src = characterData.image;
+        } else{
+            characterImage.src = `./src/img-db/${characterData.id}.jpg`;
+        }
+        characterImage.setAttribute('data-big-image', characterImage.src);
         character.appendChild(characterImage);
         
         if(index === 0){
             character.classList.add('selecionado');
         }
-
         return character;
     };
     
@@ -71,14 +79,28 @@ window.onload = function() {
             const imagemPersonagemGrande = document.querySelector('.personagem-grande');
             const idPersonagem = personagem.attributes.id.value;
             
-            imagemPersonagemGrande.src = `./src/img-db/${idPersonagem}.jpg`; //ajuste os nomes das imgs para funcionar
+            imagemPersonagemGrande.src = personagem.getElementsByTagName("img")[0].getAttribute('data-big-image');
+            // `./src/img-db/${idPersonagem}.jpg`; //ajuste os nomes das imgs para funcionar
             //pesquisar sobre interpolação template string
+            console.log(imagemPersonagemGrande, personagem);
 
             const nomePersonagem = document.getElementById('nome-personagem');
             nomePersonagem.innerText = personagem.getAttribute('data-name');
 
             const descricaoPersonagem = document.getElementById('descricao-personagem');
             descricaoPersonagem.innerText = personagem.getAttribute('data-description');
+
+            const racePersonagem = document.getElementById('race-personagem');
+            racePersonagem.innerText = personagem.getAttribute('data-race');
+
+            const genderPersonagem = document.getElementById('gender-personagem');
+            genderPersonagem.innerText = personagem.getAttribute('data-gender');
+
+            const affiliationPersonagem = document.getElementById('affiliation-personagem');
+            affiliationPersonagem.innerText = personagem.getAttribute('data-affiliation');
+
+            const combatPersonagem = document.getElementById('combat-personagem');
+            combatPersonagem.innerText = personagem.getAttribute('data-combat-style');
         })
     })
     // character.setAttribute('data-name', 'PUT HERE CHARACTER NAME');
@@ -99,4 +121,4 @@ window.onload = function() {
     // in pagina-selecao.html at section <section class="personagem-selecionado"> to show all the detailed
     // character's data obtained in window.charactersList. Find the nicier styles to display it with beauty.
 
-}
+}, 2000);
