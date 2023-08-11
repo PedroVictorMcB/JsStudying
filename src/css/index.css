@@ -1,7 +1,11 @@
 body {
-    background-image: url(https://garden.spoonflower.com/c/9410885/p/f/l/GOvyFpBkBciyw5PzVB06fH9aL2zh634xY4yxnWUO1nXojPtOVmY/Final%20selection%20Tanjiro.jpg);
+    background-image: url(https://cdn.dribbble.com/users/6776106/screenshots/15454067/media/ffefec95865a4f5a6f6e78cc93c21528.png?resize=1000x750&vertical=center);
     background-color: aqua;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .main-title {
@@ -11,27 +15,31 @@ body {
 }
 
 h1.main-title {
-    font-size: 5rem;
-}
-
-h2.main-title {
-    font-size: 4rem;
-}
-
-h3.main-title {
     font-size: 3rem;
 }
 
-h4.main-title {
+h2.main-title {
     font-size: 2rem;
 }
 
-h5.main-title {
+h3.main-title {
     font-size: 1rem;
 }
 
-h6.main-title {
+h4.main-title {
+    font-size: 0.8rem;
+}
+
+h5.main-title {
     font-size: 0.5rem;
+}
+
+h6.main-title {
+    font-size: 0.2rem;
+}
+
+header.cabecalho .main-title {
+    margin: 0;
 }
 
 header.cabecalho {
@@ -43,17 +51,64 @@ header.cabecalho > a:link {
 }
 
 ul.lista-personagens > li > img {
-    width: 150px;
-    height: 180px;
+    width: 100%;
+    height: 150px;
     object-fit: cover;
+}
+
+ul.lista-personagens > li {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 2px;
 }
 
 ul.lista-personagens {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    width: 40%;
-    height: 40%;
+    justify-content: flex-start;
     list-style-type: none;
+}
+
+main.selecao-personagens {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+main.selecao-personagens .personagem-atributos {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 60%;
+    max-height: 32rem;
+    flex: 1;
+    align-self: stretch;
+    padding: 1rem;
+    background-image: url(https://e0.pxfuel.com/wallpapers/498/69/desktop-wallpaper-wing-ho-on-%E9%A2%A8%E8%8A%B1%E9%9B%AA%E6%9C%88-japanese-calligraphy.jpg);
+    border-radius: 16px;
+    overflow-y: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.maskable {
+    position: relative;
+}
+
+.mask {
+    position: absolute;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+main.selecao-personagens .personagens {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 40%;
 }

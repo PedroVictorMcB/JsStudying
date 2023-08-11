@@ -76,14 +76,6 @@ window.onload = setTimeout( function() {
 
             personagem.classList.add('selecionado');
 
-            const imagemPersonagemGrande = document.querySelector('.personagem-grande');
-            const idPersonagem = personagem.attributes.id.value;
-            
-            imagemPersonagemGrande.src = personagem.getElementsByTagName("img")[0].getAttribute('data-big-image');
-            // `./src/img-db/${idPersonagem}.jpg`; //ajuste os nomes das imgs para funcionar
-            //pesquisar sobre interpolação template string
-            console.log(imagemPersonagemGrande, personagem);
-
             const nomePersonagem = document.getElementById('nome-personagem');
             nomePersonagem.innerText = personagem.getAttribute('data-name');
 
